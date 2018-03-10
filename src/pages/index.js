@@ -1,13 +1,26 @@
-import React from 'react'
-import Link from 'gatsby-link'
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
+import {Container, Grid} from 'semantic-ui-react';
 
-const IndexPage = () => (
-  <div>
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <Link to="/page-2/">Go to page 2</Link>
-  </div>
-)
+
+
+
+class IndexPage extends Component {
+
+  render() {
+    return (
+      <div>
+        <Container>
+          <Grid columns="2">
+            <Grid.Row>
+              <Grid.Column>left col</Grid.Column>
+            <Grid.Column> bot</Grid.Column>
+            </Grid.Row>
+          </Grid>
+        </Container>
+      </div>
+    )
+  }
+}
 
 export default IndexPage
