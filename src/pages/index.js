@@ -6,6 +6,7 @@ import { ThemeProvider } from 'styled-components';
 import ChatBot from 'react-simple-chatbot';
 
 import HomeAside from '../components/HomeAside'
+import TaxInput from '../components/TaxInput'
 import blueGradient from '../images/blue-gradient-middle.svg';
 import greenGradient from '../images/green-gradient-front.svg';
 import yellowGradient from '../images/yellow-gradient-back.svg';
@@ -47,7 +48,7 @@ class IndexPage extends Component {
                   },
                   {
                     id: 'taxInput',
-                    message: 'component will go here',
+                    component: <TaxInput />,
                     trigger: '4'
                   },
                   {
