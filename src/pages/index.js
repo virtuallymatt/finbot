@@ -16,9 +16,9 @@ class IndexPage extends Component {
     return (
       <div>
         <Container>
-          <Grid>
-            <Grid.Row columns={12}>
-              <Grid.Column width={4}><HomeAside /></Grid.Column>
+          <Grid columns={16}>
+            <Grid.Row>
+              <Grid.Column width={8}><HomeAside /></Grid.Column>
             <Grid.Column> bot</Grid.Column>
             </Grid.Row>
           </Grid>

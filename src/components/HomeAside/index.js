@@ -1,15 +1,22 @@
 import React from 'react';
-import {Header} from 'semantic-ui-react';
-import {css} from 'react-emotion';
+import {Header, Statistic} from 'semantic-ui-react';
+import styled, {css} from 'react-emotion';
 
+const HeaderText = styled.h1`
+  font-size: 3.5rem;
+  line-height: 4rem;
+  color: #005ced;
+`
 
 const HomeAside = () => {
   return (
-    <div classname={css`
-      padding-top: 50px;
+    <div className={css`
+      padding: 50px 0 0 0;
     `}>
-      <Header as="h1">Calculate your tax, <br /> in one conversation</Header>
+      <HeaderText>Calculate your tax, <br /> in one conversation</HeaderText>
       <Header as="h3">And see what you really have to spend each month!</Header>
+
+      <Statistic label="Sent to the govenor" value="£12,600,222" size="tiny" />
     </div>
   )
 }
