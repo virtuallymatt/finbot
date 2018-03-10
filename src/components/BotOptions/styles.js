@@ -19,7 +19,7 @@ export const rootStyle = {
 export const contentStyle = {
   backgroundColor: 'white',
   border: 'none',
-  padding: '30px 10px 30px 10px',
+  padding: '30px 20px 30px 20px',
   height: '100%',
   width: '100%',
   borderRadius: '15px',
