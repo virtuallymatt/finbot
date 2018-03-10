@@ -11,7 +11,7 @@ const HeaderText = styled.h1`
 const HomeAside = () => {
   return (
     <div className={css`
-      padding: 50px 0 0 0;
+      padding: 100px 0 0 0;
     `}>
       <HeaderText>Calculate your tax, <br /> in one conversation</HeaderText>
       <Header as="h3">And see what you really have to spend each month!</Header>

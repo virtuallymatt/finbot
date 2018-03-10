@@ -10,7 +10,7 @@ import blueGradient from '../images/blue-gradient-middle.svg';
 import greenGradient from '../images/green-gradient-front.svg';
 import yellowGradient from '../images/yellow-gradient-back.svg';
 
-import { theme, contentStyle, footerStyle } from '../components/BotOptions/styles'
+import { theme, rootStyle, contentStyle, footerStyle } from '../components/BotOptions/styles'
 
 class IndexPage extends Component {
 
@@ -32,7 +32,8 @@ class IndexPage extends Component {
                 hideHeader
                 botDelay={1000}
                 footerStyle={footerStyle}
-                width="400px"
+                style={rootStyle}
+                width="450px"
                 steps={[
                   {
                     id: '1',
@@ -84,6 +85,7 @@ class IndexPage extends Component {
           right: 0;
           left: 0;
           z-index: 2;
+          opacity: 0.5;
         `}></div>
 
         {/* Blue  */}
@@ -99,6 +101,8 @@ class IndexPage extends Component {
           right: 0;
           left: 0;
           z-index: 2;
+          opacity: 0.9;
+
         `}></div>
 
         {/* Green */}
@@ -115,6 +119,8 @@ class IndexPage extends Component {
           right: 0;
           left: 0;
           z-index: 2;
+          opacity: 0.8;
+
         `}></div>
 
       </div>
