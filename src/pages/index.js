@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import {Container, Grid} from 'semantic-ui-react';
 import style, {css} from 'react-emotion';
 
+import HomeAside from '../components/HomeAside'
 import blueGradient from '../images/blue-gradient-middle.svg';
 import greenGradient from '../images/green-gradient-front.svg';
 import yellowGradient from '../images/yellow-gradient-back.svg';
@@ -15,9 +16,9 @@ class IndexPage extends Component {
     return (
       <div>
         <Container>
-          <Grid columns="2">
-            <Grid.Row>
-              <Grid.Column>left col</Grid.Column>
+          <Grid>
+            <Grid.Row columns={12}>
+              <Grid.Column width={4}><HomeAside /></Grid.Column>
             <Grid.Column> bot</Grid.Column>
             </Grid.Row>
           </Grid>
