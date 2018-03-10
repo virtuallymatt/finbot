@@ -10,7 +10,7 @@ import blueGradient from '../images/blue-gradient-middle.svg';
 import greenGradient from '../images/green-gradient-front.svg';
 import yellowGradient from '../images/yellow-gradient-back.svg';
 
-import { theme, contentStyle } from '../components/BotOptions/styles'
+import { theme, contentStyle, footerStyle } from '../components/BotOptions/styles'
 
 class IndexPage extends Component {
 
@@ -29,6 +29,10 @@ class IndexPage extends Component {
               <ThemeProvider theme={theme}>
               <ChatBot
                 contentStyle={contentStyle}
+                hideHeader
+                botDelay={1000}
+                footerStyle={footerStyle}
+                width="400px"
                 steps={[
                   {
                     id: '1',

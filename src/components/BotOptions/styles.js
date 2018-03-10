@@ -16,3 +16,7 @@ export const contentStyle = {
   minHeight: '450px',
   borderRadius: '15px'
 }
+
+export const footerStyle = {
+  display: 'none'
+}
