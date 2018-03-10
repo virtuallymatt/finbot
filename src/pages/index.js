@@ -9,7 +9,7 @@ import blueGradient from '../images/blue-gradient-middle.svg';
 import greenGradient from '../images/green-gradient-front.svg';
 import yellowGradient from '../images/yellow-gradient-back.svg';
 
-
+import { contentStyle } from '../components/BotOptions/styles'
 
 class IndexPage extends Component {
 
@@ -27,6 +27,7 @@ class IndexPage extends Component {
             <Grid.Column>
 
               <ChatBot
+                contentStyle={contentStyle}
                 steps={[
                   {
                     id: '1',
