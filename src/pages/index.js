@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {Container, Grid} from 'semantic-ui-react';
 import style, {css} from 'react-emotion';
+import ChatBot from 'react-simple-chatbot';
 
 import HomeAside from '../components/HomeAside'
 import blueGradient from '../images/blue-gradient-middle.svg';
@@ -17,9 +18,44 @@ class IndexPage extends Component {
       <div>
         <Container>
           <Grid columns={16}>
+
+            {/* Left aside Column  */}
             <Grid.Row>
               <Grid.Column width={8}><HomeAside /></Grid.Column>
-            <Grid.Column> bot</Grid.Column>
+
+            {/* Right, chatbot column */}
+            <Grid.Column>
+
+              <ChatBot
+                steps={[
+                  {
+                    id: '1',
+                    message: 'Hey I\'m Fin!',
+                    trigger: '2',
+                  },
+                  {
+                    id:'2',
+                    message: 'I can calculate the tax you\'ll pay in no time at all!',
+                    trigger: 'taxInput'
+                  },
+                  {
+                    id: 'taxInput',
+                    message: 'component will go here',
+                    trigger: '4'
+                  },
+                  {
+                    id: '4',
+                    message: 'Sweet!',
+                    trigger: 'results'
+                  },
+                  {
+                    id: 'results',
+                    message: 'Here\'s your results. How depressing.'
+                  }
+                ]}
+               />
+
+            </Grid.Column>
             </Grid.Row>
           </Grid>
         </Container>

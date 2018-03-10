@@ -15,6 +15,7 @@
     "react-dom": "^16.2.0",
     "react-emotion": "^9.0.2",
     "react-helmet": "^5.2.0",
+    "react-simple-chatbot": "^0.2.9",
     "semantic-ui-react": "^0.78.3"
   },
   "keywords": [
