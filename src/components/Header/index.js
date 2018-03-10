@@ -1,33 +1,30 @@
-import React from 'react'
-import Link from 'gatsby-link'
+import React from 'react';
+import styled from 'react-emotion';
+import { Menu, Container, Image } from 'semantic-ui-react';
 
-const Header = () => (
-  <div
-    style={{
-      background: 'rebeccapurple',
-      marginBottom: '1.45rem',
-    }}
-  >
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '1.45rem 1.0875rem',
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: 'white',
-            textDecoration: 'none',
-          }}
-        >
-          Gatsby
-        </Link>
-      </h1>
-    </div>
+import logo from '../../images/logo.svg';
+
+const HeaderWrapper = styled.nav`
+  width: 100%;
+  z-index: 999;
+  background: none;
+  padding-top: 45px;
+`
+
+const Header = () => {
+  return (
+  <div>
+    <HeaderWrapper>
+    <Container>
+      <Menu secondary>
+        <Menu.Item name="FinBot">
+          <Image src={logo} alt="Fin Tax Bot"/>
+        </Menu.Item>
+      </Menu>
+    </Container>
+  </HeaderWrapper>
   </div>
 )
+}
 
 export default Header

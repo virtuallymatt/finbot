@@ -32,7 +32,7 @@ class IndexPage extends Component {
           background-image: url(${yellowGradient});
           background-repeat: none;
           background-position: bottom;
-          height: 442px;
+          height: 441px;
           width: 100%;
           position: absolute;
           bottom: 0;
