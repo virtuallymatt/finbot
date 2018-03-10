@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {Container, Grid} from 'semantic-ui-react';
 import style, {css} from 'react-emotion';
+import { ThemeProvider } from 'styled-components';
 import ChatBot from 'react-simple-chatbot';
 
 import HomeAside from '../components/HomeAside'
@@ -9,7 +10,7 @@ import blueGradient from '../images/blue-gradient-middle.svg';
 import greenGradient from '../images/green-gradient-front.svg';
 import yellowGradient from '../images/yellow-gradient-back.svg';
 
-import { contentStyle } from '../components/BotOptions/styles'
+import { theme, contentStyle } from '../components/BotOptions/styles'
 
 class IndexPage extends Component {
 
@@ -25,7 +26,7 @@ class IndexPage extends Component {
 
             {/* Right, chatbot column */}
             <Grid.Column>
-
+              <ThemeProvider theme={theme}>
               <ChatBot
                 contentStyle={contentStyle}
                 steps={[
@@ -55,6 +56,7 @@ class IndexPage extends Component {
                   }
                 ]}
                />
+             </ThemeProvider>
 
             </Grid.Column>
             </Grid.Row>
