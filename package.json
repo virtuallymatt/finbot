@@ -28,6 +28,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "prettier": "^1.11.1"
+    "prettier": "^1.11.1",
+    "semantic-ui": "^2.3.0"
   }
 }
