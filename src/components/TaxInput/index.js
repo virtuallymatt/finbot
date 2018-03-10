@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators} from 'redux';
 import { Input, Button } from 'semantic-ui-react';
 
+import { salaryChange, setSalarySchedule } from '../../actions/index';
 
 class TaxInput extends Component {
   render() {
@@ -23,5 +26,15 @@ class TaxInput extends Component {
   }
 }
 
+const mapStateToProps = ({ salary, schedule }) => {
+  return { salary, schedule };
+};
 
-export default TaxInput;
+const mapDispatchToProps = dispatch => {
+  return {
+    ...bindActionCreators({ salaryChange, setSalarySchedule }, dispatch)
+  };
+};
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(TaxInput);
