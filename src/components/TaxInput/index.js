@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import { Input, Button } from 'semantic-ui-react'
+import { Input, Button, Label } from 'semantic-ui-react'
+import { css } from 'react-emotion'
 
 import { taxSettings } from './taxSettings'
 
@@ -92,15 +93,34 @@ class TaxInput extends Component {
     return (
       <div>
         <Input
-          placeholder="Type your gross salary here"
+          placeholder="Type your gross salary here..."
           onChange={e => salaryChange(e.target.value)}
+          transparent
+          icon="pound"
+          iconPosition="left"
+          size="big"
           type="number"
           value={this.props.salary}
-        />
-
-        <div>
+          className={css`
+            &&& {
+              border-bottom: 2px solid #3384ff;
+              margin-bottom: 20px;
+              padding: 15px 30px 15px 0;
+              font-size: 14px;
+            }
+          `}
+        />{' '}
+        <p>per...</p>
+        <div
+          className={css`
+            margin-top: -10px;
+          `}>
           {buttons.map(b => (
-            <Button value={b} onClick={this.handleSubmit}>
+            <Button
+              color="green"
+              size="small"
+              value={b}
+              onClick={this.handleSubmit}>
               {b}
             </Button>
           ))}
