@@ -15,7 +15,7 @@ export const taxSettings = {
     rate: 0.4
   },
   rate_45: {
-    start: 150000,
+    start: 138500,
     end: -1,
     rate: 0.45
   }

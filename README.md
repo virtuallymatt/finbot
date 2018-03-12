@@ -1,6 +1,9 @@
 # Finbot
 An income tax calculator for people who hate calculators.
 
+## Live Site
+http://finbot.netlify.com/
+
 ## Install
 Requires Node. https://nodejs.org/en/
 
