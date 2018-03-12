@@ -103,7 +103,7 @@ class TaxInput extends Component {
           value={this.props.salary}
           className={css`
             &&& {
-              border-bottom: 2px solid #3384ff;
+              border-bottom: 2px solid #64E6A4;
               margin-bottom: 20px;
               padding: 15px 30px 15px 0;
               font-size: 14px;

@@ -1,3 +1,23 @@
 /*******************************
      User Global Variables
 *******************************/
+
+/*******************************
+     User Global Variables
+*******************************/
+
+
+
+/* Colors */
+@blue: #005CED;
+@lightBlue: #3384FF;
+@green: #64E6A4;
+@grey: #F4F7F9;
+@black: #131416;
+@red: #ff5179;
+@primaryColor: @blue;
+@secondaryColor: @green;
+
+/* Links */
+@linkColor: @blue;
+@linkHoverColor: @linkColor;

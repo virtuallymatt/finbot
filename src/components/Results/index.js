@@ -10,7 +10,7 @@ class Results extends Component {
     console.log(this.props)
 
     return taxTotal === 0 ? (
-      <p>"Look's like you're paying no tax!"</p>
+      <p>Look's like you're paying no tax!</p>
     ) : (
       <p>
         Look's like you'll be left with £<strong>{netIncome}</strong> per year after

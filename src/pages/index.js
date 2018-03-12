@@ -8,7 +8,6 @@ import ChatBot from 'react-simple-chatbot'
 import HomeAside from '../components/HomeAside'
 import TaxInput from '../components/TaxInput'
 import Results from '../components/Results'
-import BreakDown from '../components/BreakDown'
 import blueGradient from '../images/blue-gradient-middle.svg'
 import greenGradient from '../images/green-gradient-front.svg'
 import yellowGradient from '../images/yellow-gradient-back.svg'
@@ -88,28 +87,44 @@ class IndexPage extends Component {
                       },
                       {
                         id: '8',
-                        message: 'Do you want a complete breakdown?',
-                        delay: 1000,
+                        message: 'I wonder what you could buy with that! 🎉🎉',
+                        delay: 3000,
                         trigger: '9',
                       },
                       {
                         id: '9',
+                        delay: 1000,
                         options: [
-                          { value: 'yes', label: 'Yes', trigger: 'breakdown' },
-                          { value: 'no', label: 'No', trigger: 'options' },
                           {
                             value: 'Change my salary',
                             label: 'I want to change my salary',
                             trigger: '3',
                           },
+                          { value: 'Tell me a joke.', label: 'Tell me a joke', trigger: 'joke' },
+
                         ],
                       },
-                    
+
                       {
-                        id: 'options',
-                        message: 'options',
+                        id: 'joke',
+                        delay: 4000,
+                        message: 'I\'d tell you some tax jokes, but I doubt you\'d depreciate it!',
+                        trigger: 'last'
                       },
-                    ]}
+                      {
+                        id: 'last',
+                        delay: 5000,
+                        end: true,
+                        options: [
+                          {
+                            value: 'Change my salary',
+                            label: 'I want to change my salary',
+                            trigger: '3',
+                          },
+                        ]
+                      }
+                    ]
+                  }
                   />
                 </ThemeProvider>
               </Grid.Column>

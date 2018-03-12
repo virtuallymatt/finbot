@@ -4,8 +4,8 @@ export const theme = {
   background: '#fff',
   botBubbleColor: '#005CED',
   botFontColor: '#fff',
-  userBubbleColor: '#64E6A4',
-  userFontColor: '#fff',
+  userBubbleColor: '#F4F7F9',
+  userFontColor: '#081E42',
 }
 
 export const rootStyle = {
