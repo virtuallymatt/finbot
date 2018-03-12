@@ -3,7 +3,13 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { Input, Button } from 'semantic-ui-react'
 
-import { salaryChange, setSalarySchedule } from '../../actions/index'
+import { taxSettings } from './taxSettings'
+
+import {
+  salaryChange,
+  setSalarySchedule,
+  getIncomeTax,
+} from '../../actions/index'
 
 class TaxInput extends Component {
   constructor(props) {
@@ -13,10 +19,10 @@ class TaxInput extends Component {
     this.handleSubmit = this.handleSubmit.bind(this)
   }
 
-  handleSubmit() {
+  handleSubmit(e) {
     const props = this.props
 
-    const incomeToTax = this.getIncome(e.target.value.props.salary)
+    const incomeToTax = this.getIncome(e.target.value, props.salary)
     const tax = this.getTaxBreakDown(incomeToTax)
     props.getIncomeTax(tax)
     this.props.setSalarySchedule(e.target.value)
@@ -35,58 +41,62 @@ class TaxInput extends Component {
     }
   }
 
-  / Calculate tax for a rate
+  // Calculate tax for a rate
   getTax(rate, income, props) {
-    let taxRateDifference = rate.end === -1 ? income : rate.end - rate.start;
-    let totalMinusDifference = income - taxRateDifference;
-    let carry = totalMinusDifference > 0 ? totalMinusDifference : 0;
+    let taxRateDifference = rate.end === -1 ? income : rate.end - rate.start
+    let totalMinusDifference = income - taxRateDifference
+    let carry = totalMinusDifference > 0 ? totalMinusDifference : 0
 
     if (income > 0) {
       if (income >= taxRateDifference) {
         return {
           tax: taxRateDifference * rate.rate,
-          carry: carry
-        };
+          carry: carry,
+        }
       }
       return {
         tax: income * rate.rate,
-        carry: carry
-      };
+        carry: carry,
+      }
     }
     return {
       tax: 0,
-      carry: carry
-    };
+      carry: carry,
+    }
   }
 
   // Calculate year income based on schedule
   getIncome(schedule, salary) {
     switch (schedule) {
       case 'year':
-        return salary;
-        break;
+        return salary
+        break
 
       case 'month':
-        return salary * 12;
-        break;
+        return salary * 12
+        break
 
       case 'week':
-        return salary * 52;
-        break;
+        return salary * 52
+        break
 
       case 'day':
-        return salary * 365;
-        break;
+        return salary * 365
+        break
     }
   }
 
-
   render() {
     const buttons = ['year', 'month', 'day', 'year']
-
+    const salaryChange = this.props.salaryChange
     return (
       <div>
-        <Input placeholder="Type your gross salary here..." type="number" />
+        <Input
+          placeholder="Type your gross salary here"
+          onChange={e => salaryChange(e.target.value)}
+          type="number"
+          value={this.props.salary}
+        />
 
         <div>
           {buttons.map(b => (
@@ -100,13 +110,16 @@ class TaxInput extends Component {
   }
 }
 
-const mapStateToProps = ({ salary, schedule }) => {
-  return { salary, schedule }
+const mapStateToProps = ({ salary, schedule, tax }) => {
+  return { salary, schedule, tax }
 }
 
 const mapDispatchToProps = dispatch => {
   return {
-    ...bindActionCreators({ salaryChange, setSalarySchedule }, dispatch),
+    ...bindActionCreators(
+      { salaryChange, setSalarySchedule, getIncomeTax },
+      dispatch
+    ),
   }
 }
 
