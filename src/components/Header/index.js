@@ -19,6 +19,7 @@ const Header = () => {
       <Menu secondary>
         <Menu.Item name="FinBot">
           <Image src={logo} alt="Fin Tax Bot"/>
+          
         </Menu.Item>
       </Menu>
     </Container>

@@ -11,6 +11,7 @@ import Results from '../components/Results'
 import blueGradient from '../images/blue-gradient-middle.svg'
 import greenGradient from '../images/green-gradient-front.svg'
 import yellowGradient from '../images/yellow-gradient-back.svg'
+import robot from '../images/robot.svg'
 
 import {
   theme,
@@ -36,6 +37,8 @@ class IndexPage extends Component {
               <Grid.Column width={7} floated="right">
                 <ThemeProvider theme={theme}>
                   <ChatBot
+                    botAvatar={robot}
+                    hideUserAvatar={true}
                     contentStyle={contentStyle}
                     hideHeader
                     botDelay={1000}
@@ -107,14 +110,14 @@ class IndexPage extends Component {
 
                       {
                         id: 'joke',
-                        delay: 4000,
+                        delay: 3000,
                         message: 'I\'d tell you some tax jokes, but I doubt you\'d depreciate it!',
                         trigger: 'last'
                       },
                       {
                         id: 'last',
                         delay: 5000,
-                        end: true,
+                      
                         options: [
                           {
                             value: 'Change my salary',
