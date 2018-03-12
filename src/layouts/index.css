@@ -633,3 +633,11 @@ pre tt:after {
   color: white!important;
   transition: 0.5s ease;
 }
+
+body ::-webkit-scrollbar-thumb {
+  background: none!important;
+}
+
+body ::-webkit-scrollbar-track {
+  background: none!important;
+}
