@@ -13,7 +13,12 @@ npm install --global gatsby-cli
 
 Clone this folder:
 ```sh
-git glone https://github.com/virtuallymatt/finbot.git
+git clone https://github.com/virtuallymatt/finbot.git
+```
+
+Install packages:
+```sh
+npm install
 ```
 
 Then, inside your folder:
