@@ -11,7 +11,7 @@ import blueGradient from '../images/blue-gradient-middle.svg';
 import greenGradient from '../images/green-gradient-front.svg';
 import yellowGradient from '../images/yellow-gradient-back.svg';
 
-import { theme, rootStyle, contentStyle, footerStyle } from '../components/BotOptions/styles'
+import { theme, rootStyle, contentStyle, footerStyle, customStyle } from '../components/BotOptions/styles'
 
 class IndexPage extends Component {
 
@@ -34,6 +34,7 @@ class IndexPage extends Component {
                 botDelay={1000}
                 footerStyle={footerStyle}
                 style={rootStyle}
+                customStyle={customStyle}
                 width="450px"
                 steps={[
                   {
@@ -49,6 +50,7 @@ class IndexPage extends Component {
                   {
                     id: 'taxInput',
                     component: <TaxInput />,
+                    waitAction: true,
                     trigger: '4'
                   },
                   {

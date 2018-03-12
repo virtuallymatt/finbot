@@ -3,7 +3,7 @@ import {reducer_salary} from './reducer_salary';
 import {reducer_schedule} from './reducer_schedule';
 
 const rootReducer = combineReducers({
-  salary: reducer_tax,
+  salary: reducer_salary,
   schedule: reducer_schedule
 });
 
