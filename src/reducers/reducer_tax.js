@@ -1,11 +1,11 @@
-import { GET_INCOME_TAX } from '../actions/index';
+import { GET_INCOME_TAX } from '../actions/index'
 
 export const reducer_tax = (state = [], action) => {
   switch (action.type) {
     case GET_INCOME_TAX:
-      return action.value;
+      return action
 
     default:
-      return state;
+      return state
   }
-};
+}

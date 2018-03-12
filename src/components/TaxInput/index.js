@@ -25,7 +25,7 @@ class TaxInput extends Component {
 
     const incomeToTax = this.getIncome(e.target.value, props.salary)
     const tax = this.getTaxBreakDown(incomeToTax)
-    props.getIncomeTax(tax)
+    props.getIncomeTax(tax, incomeToTax)
     this.props.setSalarySchedule(e.target.value)
     props.triggerNextStep()
   }
@@ -88,7 +88,7 @@ class TaxInput extends Component {
   }
 
   render() {
-    const buttons = ['year', 'month', 'day', 'year']
+    const buttons = ['year', 'month', 'week', 'day']
     const salaryChange = this.props.salaryChange
     return (
       <div>

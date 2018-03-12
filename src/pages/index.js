@@ -8,6 +8,7 @@ import ChatBot from 'react-simple-chatbot'
 import HomeAside from '../components/HomeAside'
 import TaxInput from '../components/TaxInput'
 import Results from '../components/Results'
+import BreakDown from '../components/BreakDown'
 import blueGradient from '../images/blue-gradient-middle.svg'
 import greenGradient from '../images/green-gradient-front.svg'
 import yellowGradient from '../images/yellow-gradient-back.svg'
@@ -75,7 +76,7 @@ class IndexPage extends Component {
                       },
                       {
                         id: '6',
-                        message: 'Oh...😫 this looks depressing...',
+                        message: 'hmmm...🧐',
                         trigger: 'results',
                         delay: 3000,
                       },
@@ -83,6 +84,30 @@ class IndexPage extends Component {
                         id: 'results',
                         component: <Results />,
                         asMessage: true,
+                        trigger: '8',
+                      },
+                      {
+                        id: '8',
+                        message: 'Do you want a complete breakdown?',
+                        delay: 1000,
+                        trigger: '9',
+                      },
+                      {
+                        id: '9',
+                        options: [
+                          { value: 'yes', label: 'Yes', trigger: 'breakdown' },
+                          { value: 'no', label: 'No', trigger: 'options' },
+                          {
+                            value: 'Change my salary',
+                            label: 'I want to change my salary',
+                            trigger: '3',
+                          },
+                        ],
+                      },
+                    
+                      {
+                        id: 'options',
+                        message: 'options',
                       },
                     ]}
                   />

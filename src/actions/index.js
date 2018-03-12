@@ -16,9 +16,10 @@ export function setSalarySchedule(value) {
   }
 }
 
-export function getIncomeTax(value) {
+export function getIncomeTax({ taxTotal }, incomeToTax) {
   return {
     type: GET_INCOME_TAX,
-    value,
+    taxTotal,
+    incomeToTax,
   }
 }

@@ -4,17 +4,17 @@ import { connect } from 'react-redux'
 class Results extends Component {
   renderTaxResult() {
     const { salary, schedule, tax } = this.props
-    const { taxTotal } = tax
-    const netIncome = salary - taxTotal
+    const { taxTotal, incomeToTax } = tax
+    const netIncome = incomeToTax - taxTotal
 
     console.log(this.props)
 
-    return tax === 0 ? (
+    return taxTotal === 0 ? (
       <p>"Look's like you're paying no tax!"</p>
     ) : (
       <p>
-        Look's like you'll be left with £{netIncome} after paying £{taxTotal} to
-        the govenor.
+        Look's like you'll be left with £<strong>{netIncome}</strong> per year after
+        paying £<strong>{taxTotal}</strong> to the govenor.
       </p>
     )
   }
