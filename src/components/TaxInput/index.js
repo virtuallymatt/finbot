@@ -82,7 +82,7 @@ class TaxInput extends Component {
         break
 
       case 'day':
-        return salary * 360
+        return salary * 260
         break
     }
   }
