@@ -3,6 +3,12 @@ An income tax calculator for people who hate calculators.
 
 ## Install
 Requires Node. https://nodejs.org/en/
+Detailed Node install instructions for Gatsby: https://www.gatsbyjs.org/tutorial/part-one/
+
+To check your Node version. Gatsby requires node v6 or later.
+```sh
+node --version
+```
 
 Requires the Gatsby CLI installed globally. Full instructions found here: https://www.gatsbyjs.org/docs/
 
